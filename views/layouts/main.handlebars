@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>TheEvent Bootstrap Template - Index</title>
+  <title>The Everything Tech Blog</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -41,17 +41,17 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="index.html">Home</a></li>
+          <li class="menu-active"><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="#speakers">Blog</a></li>
-          <li><a href="/signup">Sign Up</a></li>
+          <li><a href="/blog">Blog</a></li>
           {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="" id="logout">Logout</a></li>
         {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+          <a href="/login">login</a>
+          <li><a href="/signup">Sign Up</a></li>
         </ul>
+        {{/if}}
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- End Header -->
@@ -146,8 +146,9 @@
   <script src="javascript/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
-   
+   <script src="/javascript/logout.js"></script>
   <script src="javascript/js/main.js"></script>
+
  
 
 </body>

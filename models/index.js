@@ -13,6 +13,7 @@ User.hasMany(Post, {
 
 Post.belongsTo(User, {
 foreignKey: 'user_id',
+onDelete: 'CASCADE'
 });
 
 //creates a many to many relationship
@@ -46,7 +47,8 @@ Vote.belongsTo(User, {
   });
 
   Comment.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
   });
   
   Comment.belongsTo(Post, {
@@ -58,7 +60,8 @@ Vote.belongsTo(User, {
   });
   
   Post.hasMany(Comment, {
-    foreignKey: 'post_id'
+    foreignKey: 'post_id',
+    onDelete: 'CASCADE'
   });
 
   Image.belongsTo(Post, {
